@@ -1,10 +1,4 @@
---[[
-
-	--Made by Squiz (http://steamcommunity.com/id/giveitasquiz/)
-	-- Add me for any questions or to reuse ^-^
-
-]]-- 
-
+# DarkRP Jobs.
 cpVoicesTeam = {
 "Police Recruit",
 "Police Lt.",
@@ -537,11 +531,10 @@ hook.Add("PlayerSay","cpVoice",function(ply,text,public)
 
     for k,v in pairs ( cpVoicesTeam ) do
         if ( team.GetName(ply:Team())==v ) then
-        
-		if(cpComs[text]) then
-            ply:EmitSound(cpComs[text])  
+        	if(cpComs[text]) then
+            		ply:EmitSound(cpComs[text])  
 			return text
-        end              
+        	end              
         else end
     end
 end )
